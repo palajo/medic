@@ -377,7 +377,7 @@ p{
 
     color: #666;
 }
-a{
+a, a:hover{
     text-decoration: none;
 }
 
@@ -418,7 +418,7 @@ button:focus{
 
 }
 .button:hover{
-    box-shadow: inset 250px 0 0 0 #e16521;
+    box-shadow: inset 250px 0 0 0 #f26118;
 }
 .button:focus{
     outline: none;
@@ -452,7 +452,9 @@ button:focus{
 .color-white{
     color: white;
 }
-
+.color-red{
+    color: #E4381C;
+}
 
 
 
@@ -466,7 +468,11 @@ header{
     padding: 30px 100px;
 }
 
-
+.top-social a{
+    font-size: 24px;
+    color: white;
+    padding: 0px 5px;
+}
 
 
 
@@ -482,12 +488,12 @@ header{
 
 .hero-items .owl-item.active .single-hero-item .hero-text h2,
 .hero-items .owl-item.active .single-hero-item .hero-text h1,
-.hero-items .owl-item.active .single-hero-item .hero-text .button {
+.hero-items .owl-item.active .single-hero-item .hero-text .button-appear {
     top: 0;
     opacity: 1;
 }
 
-.hero-items .owl-item.active .single-hero-item .hero-text h2 {
+.hero-items .owl-item.active .single-hero-item .hero-text h2{
     -webkit-transition: all 0.2s ease 0.2s;
     -o-transition: all 0.2s ease 0.2s;
     transition: all 0.2s ease 0.2s;
@@ -499,7 +505,7 @@ header{
     transition: all 0.4s ease 0.4s;
 }
 
-.hero-items .owl-item.active .single-hero-item .hero-text .button {
+.hero-items .owl-item.active .single-hero-item .hero-text .button-appear {
     -webkit-transition: all 0.6s ease 0.6s;
     -o-transition: all 0.6s ease 0.6s;
     transition: all 0.6s ease 0.6s;
@@ -514,8 +520,13 @@ header{
     transform: translateY(-30px);
     line-height: 30px;
     font-size: 60px;
-    color: rgba(255, 255, 255, 0.35);
+    color: rgba(255, 255, 255, 0.55);
 }
+.hero-items .owl-nav button[type=button]:hover {
+    color: rgba(255, 255, 255, 1);
+    transition: 0.3s ease;
+}
+
 
 .hero-items .owl-nav button[type=button].owl-next {
     left: auto;
@@ -582,8 +593,13 @@ header{
 .single-hero-item .hero-text h2 {
     color: #ffffff;
     text-transform: uppercase;
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 60px;
+
+    font-size: 64px;
+    line-height: 72px;
+
+    font-weight: 300;
+
+
     margin-bottom: 4px;
     position: relative;
     top: 50px;
@@ -601,7 +617,7 @@ header{
     opacity: 0;
 }
 
-.single-hero-item .hero-text .button {
+.single-hero-item .hero-text .button-appear {
     position: relative;
     top: 50px;
     opacity: 0;
@@ -610,78 +626,21 @@ header{
 
 
 
-
-
-
-
-
-
-
-.service-block{
-    width: 380px;
-    height: 240px;
-
-    background: #1f1f1f;
-    background-size: cover;
+.double-image {
+    position: relative;
+    top: 0;
+    left: 0;
 }
-
-
-.swimming-pool{
-    background: url("../img/swimming-pool.jpg");
-}
-.mini-football{
-    background: url("../img/mini-football.jpg");
-}
-.restaurant{
-    background: url("../img/restaurant.jpg");
-}
-.kids-park{
-    background: url("../img/kids-park.jpg");
-}
-.ice-skating{
-    background: url("../img/ice-skating.jpg");
-}
-.tree-climbing{
-    background: url("../img/tree-climbing.jpg");
-}
-
-
-.service-block h3{
-    color: white;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.35);
-}
-
-
-
-.double-image{
-    width: 100%;
-    height: 500px;
-}
-.image-block-1{
-    position: absolute;
-    z-index: 2;
-
-    width: 75%;
-    height: 350px;
-
-    background: url("../img/double-image-1.jpg");
-    background-size: cover;
-
+.image-block-1 {
+    position: relative;
+    top: 0;
+    left: 0;
     box-shadow: 10px 15px 15px  rgba(0,0,0,0.2);
 }
-.image-block-2{
+.image-block-2 {
     position: absolute;
-    z-index: 1;
-
-    right: 0;
-    bottom: 0;
-
-    width: 75%;
-    height: 350px;
-
-    background: url("../img/double-image-2.jpg");
-    background-size: cover;
-
+    top: 100px;
+    left: 100px;
     box-shadow: 10px 15px 15px  rgba(0,0,0,0.2);
 }
 
@@ -695,14 +654,35 @@ header{
 
     border-radius: 99px;
 }
-.choice-button.active{
+.nav-tabs .nav-link.active .choice-button{
     background: white;
     border: 2px solid #E16521;
 
     color: #E16521;
 }
-.choice-button:hover{
+.nav-tabs .nav-link.active .choice-button:hover{
     color: white;
+}
+
+.nav-tabs{
+    border: none;
+}
+.nav-tabs .nav-link{
+    border: none;
+    padding: 0 10px;
+}
+
+.tab-pane.active .row .price-block:nth-child(1){
+    -webkit-animation: slide-down 1s ease;
+    animation-fill-mode: forwards;
+}
+.tab-pane.active .row .price-block:nth-child(2){
+    -webkit-animation: slide-up 1s ease;
+    animation-fill-mode: forwards;
+}
+.tab-pane.active .row .price-block:nth-child(3){
+    -webkit-animation: slide-down 1.5s ease;
+    animation-fill-mode: forwards;
 }
 
 
@@ -712,13 +692,34 @@ header{
 
     padding: 50px 50px 70px 50px;
 }
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 p.warning{
     font-size: 14px;
     line-height: 18px;
 
     font-weight: 400;
 
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
 
     margin: 15px 0px 20px 0px;
 }
@@ -765,7 +766,7 @@ p.warning{
 }
 .price-block.favourite table tr th{
     background: #37A8FC;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
 }
 .price-block.favourite table tr td{
     border-bottom: 1px solid #61BBFF;
@@ -774,3 +775,553 @@ p.warning{
     color: white;
 }
 
+
+.news-block{
+    width: 100%;
+
+    background: #e4381c; /* Old browsers */
+    background: -moz-linear-gradient(right,  #e4381c 0%, #e16521 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(right,  #e4381c 0%,#e16521 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to left,  #e4381c 0%,#e16521 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4381c', endColorstr='#e16521',GradientType=1 ); /* IE6-9 */
+
+    display: flex;
+    padding: 30px;
+
+    background-size: cover;
+}
+
+.news-block:hover::before{
+    position: absolute;
+    content: '';
+
+
+    background: rgba(255, 255, 255, 0.4);
+
+    top: 0;
+    left: 0;
+
+}
+
+
+.news-block.big{
+    height: 420px;
+}
+.news-block.mid{
+    height: 340px;
+}
+.news-block.small{
+    height: 260px;
+}
+.col-4 .news-block:last-child{
+    margin-top: 30px;
+}
+.news-block .news-block-text {
+    max-width: 300px;
+}
+.news-block .news-block-text p.news-category{
+    font-size: 14px;
+    line-height: 18px;
+
+    font-family: 'Oswald';
+    font-weight: 400;
+
+    color: white;
+    margin-bottom: 10px;
+}
+.news-block .news-block-text h4.news-title{
+    color: white;
+}
+
+
+.contacts-block{
+    position: absolute;
+    width: 600px;
+
+    padding: 70px;
+
+    background: #fff;
+
+    margin-top: 70px;
+    right: 100px;
+
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+}
+.working-time{
+    color: #1f1f1f;
+    line-height: 20px;
+}
+.working-time b{
+    font-size: 14px;
+    font-family: 'Oswald';
+    font-weight: 500;
+
+    margin-right: 10px;
+}
+
+input[type="text"]{
+
+    border: none;
+    outline: none;
+
+    padding: 10px 20px;
+
+    border-radius: 10px;
+    border-bottom: 1px solid #cdcbcb;
+    border-top: 1px solid #cdcbcb;
+
+    width: 100% ;
+}
+input[type="text"]:hover, input[type="text"]:focus,
+textarea:hover, textarea:focus {
+
+    border-bottom: 1px solid #bfbdbd;
+    border-top: 1px solid #bfbdbd;
+    transition: 0.3s ease;
+}
+textarea{
+
+    border: none;
+    outline: none;
+
+    padding: 10px 20px;
+
+    border-radius: 10px;
+    border-bottom: 1px solid #cdcbcb;
+    border-top: 1px solid #cdcbcb;
+
+    resize: none;
+    width: 100%;
+    height: 100px;
+}
+
+footer{
+    background: #1f1f1f;
+}
+footer h4{
+    margin-bottom: 30px;
+}
+footer .footer-social{
+    margin-top: 15px;
+}
+footer .footer-social a{
+    color: white;
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+footer .event-block{
+    margin-bottom: 20px;
+}
+footer .event-block h5{
+    color: white;
+
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 500;
+}
+footer .event-block p{
+    margin-left: 5px;
+    color: #808080;
+
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+
+
+
+
+footer .contact-block .contact{
+    margin-left: 20px;
+}
+footer .contact-block .contact h5{
+    color: white;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    font-weight: 500;
+}
+footer .contact-block .contact p{
+    margin-top: 5px;
+    color: #808080;
+}
+footer .contact-block{
+    margin-bottom: 20px;
+}
+
+ul.navbar-nav > li.nav-item{
+    padding: 0px;
+}
+ul.navbar-nav > li.nav-item > a.nav-link{
+    color: white;
+
+    font-size: 14px;
+    line-height: 28px;
+
+
+    font-family: 'Oswald';
+    font-weight: 500;
+    text-transform: uppercase;
+
+    padding: 0;
+
+}
+
+
+
+
+
+
+
+.grid {
+    position: relative;
+    margin: 0 auto;
+    padding: 1em 0 4em;
+    max-width: 1200px;
+    list-style: none;
+    text-align: center;
+}
+
+/* Common style */
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+
+    margin: 0px 10px;
+    width: 380px;
+    height: 240px;
+
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+
+    margin-bottom: 30px
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.grid figure h3 {
+    font-weight: 500;
+}
+.grid figure h3,
+.grid figure p {
+    margin: 0;
+    color: #fff;
+}
+
+
+/*---------------*/
+/***** services *****/
+/*---------------*/
+
+figure.effect-bubba:nth-child(1) {
+    background: #5ECD06;
+}
+figure.effect-bubba:nth-child(2) {
+    background: #37A8FC;
+}
+figure.effect-bubba:nth-child(3) {
+    background: #9e5406;
+}
+figure.effect-bubba:nth-child(4) {
+    background: #0C9A09;
+}
+figure.effect-bubba:nth-child(5) {
+    background: #C87013;
+}
+figure.effect-bubba:nth-child(6) {
+    background: #3F90CB;
+}
+
+figure.effect-bubba img {
+    opacity: 0.85;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+figure.effect-bubba:hover img {
+    opacity: 0.4;
+}
+
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-bubba figcaption::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+
+figure.effect-bubba figcaption::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    transform: scale(1,0);
+}
+
+figure.effect-bubba h3 {
+    -webkit-transition: -webkit-transform 0.7s;
+    transition: transform 0.7s;
+    -webkit-transform: translate3d(0,100px,0);
+    transform: translate3d(0,100px,0);
+
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.25);
+}
+
+figure.effect-bubba p {
+    margin-top: 10px;
+    padding: 0px 60px;
+    opacity: 0;
+    -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
+    transition: opacity 0.75s, transform 0.75s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+
+figure.effect-bubba:hover figcaption::before,
+figure.effect-bubba:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+figure.effect-bubba:hover h3,
+figure.effect-bubba:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------*/
+/***** events *****/
+/*---------------*/
+.event-grid {
+    position: relative;
+    margin: 0 auto;
+    padding: 1em 0 4em;
+    max-width: 1200px;
+    list-style: none;
+    text-align: center;
+}
+
+/* Common style */
+.event-grid figure {
+    position: relative;
+    overflow: hidden;
+
+    margin: 0px 10px;
+    width: 380px;
+    height: 240px;
+
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+
+    margin-bottom: 30px
+}
+.event-grid figure.small{
+    height: 260px;
+}
+
+.event-grid figure.mid{
+    height: 340px;
+}
+.event-grid figure.big{
+    height: 420px;
+}
+
+.event-grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+    object-fit: cover;
+}
+
+.event-grid figure figcaption::before,
+.event-grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.event-grid figure figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 0px 50px;
+}
+.event-grid figure figcaption .event-title{
+    position: absolute;
+
+    bottom: 50px;
+    left: 0px;
+
+    padding: 0px 50px;
+
+    text-align: left;
+}
+.event-grid figure figcaption .event-title h4{
+    color: white;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.event-grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.event-grid figure h4 {
+    font-weight: 500;
+}
+.event-grid figure h3,
+.event-grid figure p {
+    margin: 0;
+    color: #fff;
+}
+
+figure.event.small {
+    background: #5ECD06;
+}
+figure.event.mid {
+    background: #37A8FC;
+}
+figure.event.big {
+    background: #C87013;
+}
+figure.event img {
+    opacity: 1;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+figure.event:hover img {
+    opacity: 0.4;
+}
+
+figure.event figcaption::before,
+figure.event figcaption::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.event figcaption::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+
+figure.event figcaption::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    transform: scale(1,0);
+}
+
+figure.event h4 {
+    -webkit-transition: -webkit-transform 0.7s;
+    transition: transform 0.7s;
+    -webkit-transform: translate3d(0,70px,0);
+    transform: translate3d(0,70px,0);
+
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.25);
+
+    bottom: 0;
+}
+
+figure.event p {
+    margin-top: 10px;
+    opacity: 0;
+    -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
+    transition: opacity 0.75s, transform 0.75s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+figure.event p.event-description{
+    transform: scale(0);
+    transition: 0.3s ease;
+}
+figure.event:hover p.event-description{
+    position: relative;
+    transform: scale(1);
+}
+figure.event:hover figcaption::before,
+figure.event:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+figure.event:hover h4,
+figure.event:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
