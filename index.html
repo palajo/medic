@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
 
     <link rel="stylesheet" type="text/css" href="./css/styles.css?v=1" />
+    <link rel="stylesheet" type="text/css" href="./css/adaptation/mobile.css" />
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
 
 </head>
@@ -20,7 +21,9 @@
 <header>
     <div class="d-flex justify-content-between">
         <div>
-            <img src="./img/logo.svg" />
+            <a href="#">
+                <img src="./img/logo.svg" class="logo" />
+            </a>
         </div>
         <div class="top-social align-self-center">
             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -32,6 +35,9 @@
     </div>
 </header>
 <body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
     <!-- Hero Section Begin -->
     <section class="hero-section">
         <div class="hero-items owl-carousel">
@@ -40,7 +46,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="hero-text">
-                                <h2>ВЖЕ В ЦЮ СУБОТУ</h2>
+                                <h3>ВЖЕ В ЦЮ СУБОТУ</h3>
                                 <h1>ПИВНЕ ПАТІ НА МЕДИКУ</h1>
                                 <div class="button-appear">
                                     <button class="button">ДЕТАЛЬНІШЕ</button>
@@ -55,7 +61,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="hero-text">
-                                <h2>у вас є мопс</h2>
+                                <h3>у вас є мопс</h3>
                                 <h1>ГО НА МОПСОФЕСТ</h1>
                                 <div class="button-appear">
                                     <button class="button">ДЕТАЛЬНІШЕ</button>
@@ -70,7 +76,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="hero-text">
-                                <h2>зголоднів?</h2>
+                                <h3>зголоднів?</h3>
                                 <h1>СУПЕР-ЛАНЧ НА ДАЧІ</h1>
                                 <div class="button-appear">
                                     <button class="button">ДЕТАЛЬНІШЕ</button>
@@ -83,13 +89,13 @@
         </div>
     </section>
     <!-- Hero End -->
-    <div class="container max-width-1200 padding-top-150 padding-bottom-150">
+    <div class="container max-width-1200 space">
         <div class="row justify-content-center margin-bottom-50">
             <h2>НАШІ ПОСЛУГИ</h2>
         </div>
         <div class="row">
             <div class="grid">
-                <figure class="effect-bubba">
+                <figure class="service">
                     <img src="./img/mini-football.jpg" alt="img02"/>
                     <figcaption>
                         <div class="h-100 row justify-content-center">
@@ -100,7 +106,7 @@
                         </div>
                     </figcaption>
                 </figure>
-                <figure class="effect-bubba">
+                <figure class="service">
                     <img src="./img/swimming-pool.jpg" alt="img02"/>
                     <figcaption>
                         <div class="h-100 row justify-content-center">
@@ -111,7 +117,7 @@
                         </div>
                     </figcaption>
                 </figure>
-                <figure class="effect-bubba">
+                <figure class="service">
                     <img src="./img/restaurant.jpg" alt="img02"/>
                     <figcaption>
                         <div class="h-100 row justify-content-center">
@@ -122,7 +128,7 @@
                         </div>
                     </figcaption>
                 </figure>
-                <figure class="effect-bubba">
+                <figure class="service">
                     <img src="./img/tree-climbing.jpg" alt="img02"/>
                     <figcaption>
                         <div class="h-100 row justify-content-center">
@@ -133,7 +139,7 @@
                         </div>
                     </figcaption>
                 </figure>
-                <figure class="effect-bubba">
+                <figure class="service">
                     <img src="./img/kids-park.jpg" alt="img02"/>
                     <figcaption>
                         <div class="h-100 row justify-content-center">
@@ -144,7 +150,7 @@
                         </div>
                     </figcaption>
                 </figure>
-                <figure class="effect-bubba">
+                <figure class="service">
                     <img src="./img/ice-skating.jpg" alt="img02"/>
                     <figcaption>
                         <div class="h-100 row justify-content-center">
@@ -159,19 +165,19 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid background-gray padding-top-150 padding-bottom-150">
+    <div class="container-fluid background-gray space">
         <div class="container max-width-1200">
             <div class="row">
-                <div class="col-6 align-self-center">
+                <div class="col-md-6 align-self-center">
                     <div class="row">
                         <div class="max-width-500">
                             <h2 class="margin-bottom-30">
                                 ВТОМИЛИСЬ?
                             </h2>
-                            <h5 class="margin-bottom-40">
+                            <h5 class="margin-bottom-40 max-width-350">
                                 Їздити за місто, щоб насолодитись природою та відпочити з друзями чи сім'єю?
                             </h5>
-                            <p class="margin-bottom-40">
+                            <p class="margin-bottom-40 max-width-450">
                                 Ми знаходимось у ближньому центрі і працюємо до самого вечора, тому дорога
                                 не займе багато часу, а на відпочинок залишиться цілий день! У 2 хв від
                                 комплексу знаходиться зупинка, тому дістатись до нас з легкістю можна і
@@ -184,16 +190,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="double-image">
-                        <img class="image-block-1" src="./img/double-image-1.jpg" height="250px" />
-                        <img class="image-block-2" src="./img/double-image-2.jpg" height="250px" />
+                        <img class="image-block-1" src="./img/double-image-1.jpg" />
+                        <img class="image-block-2" src="./img/double-image-2.jpg" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container padding-top-150 padding-bottom-150">
+    <div class="container space">
 
         <div class="row justify-content-center">
             <div class="text-center">
@@ -205,7 +211,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
                         <button class="button choice-button">
@@ -275,7 +281,7 @@
                             <img class="margin-right-15" src="./img/cup.svg" height="30px" />
                             <h4>СІМЕЙНИЙ ТАРИФ</h4>
                         </div>
-                        <p class="warning">
+                        <p class="requirements">
                             Мінімум 3 особи.<br/>
                             Максимум 2 дорослих.
                         </p>
@@ -393,7 +399,7 @@
                             <img class="margin-right-15" src="./img/cup.svg" height="30px" />
                             <h4>СІМЕЙНИЙ ТАРИФ</h4>
                         </div>
-                        <p class="warning">
+                        <p class="requirements">
                             Мінімум 3 особи.<br/>
                             Максимум 2 дорослих.
                         </p>
@@ -511,7 +517,7 @@
                             <img class="margin-right-15" src="./img/cup.svg" height="30px" />
                             <h4>СІМЕЙНИЙ ТАРИФ</h4>
                         </div>
-                        <p class="warning">
+                        <p class="requirements">
                             Мінімум 3 особи.<br/>
                             Максимум 2 дорослих.
                         </p>
@@ -593,15 +599,15 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid background-dark padding-top-150 padding-bottom-150">
-        <div class="container">
+    <div class="container-fluid background-dark space">
+        <div class="container max-width-1200">
             <div class="row margin-bottom-70">
                 <h2 class="color-green">ЧОМУ ОБИРАЮТЬ НАС?</h2>
             </div>
-            <div class="row margin-bottom-100">
-                <div class="col-4">
-                    <div class="row justify-content-center">
-                        <div class="span margin-right-30">
+            <div class="row why-we margin">
+                <div class="col-md-4">
+                    <div class="row text-center text-md-left">
+                        <div class="span why-we-icon">
                             <img src="./img/icons/chose-icon-1.png" width="64px" />
                         </div>
                         <div class="benefit-block-text max-width-300">
@@ -613,9 +619,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="row justify-content-center">
-                        <div class="span margin-right-30">
+                <div class="col-md-4">
+                    <div class="row text-center text-md-left">
+                        <div class="span why-we-icon">
                             <img src="./img/icons/chose-icon-2.png" width="64px" />
                         </div>
                         <div class="benefit-block-text max-width-300">
@@ -627,9 +633,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 justify-content-center">
-                    <div class="row">
-                        <div class="span margin-right-30">
+                <div class="col-md-4">
+                    <div class="row text-center text-md-left">
+                        <div class="span why-we-icon">
                             <img src="./img/icons/chose-icon-3.png" width="64px" />
                         </div>
                         <div class="benefit-block-text max-width-300">
@@ -642,10 +648,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-4">
-                    <div class="row justify-content-center">
-                        <div class="span margin-right-30">
+            <div class="row why-we">
+                <div class="col-md-4">
+                    <div class="row text-center text-md-left">
+                        <div class="span why-we-icon">
                             <img src="./img/icons/chose-icon-4.png" width="64px" />
                         </div>
                         <div class="benefit-block-text max-width-300">
@@ -657,9 +663,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="row justify-content-center">
-                        <div class="span margin-right-30">
+                <div class="col-md-4">
+                    <div class="row text-center text-md-left">
+                        <div class="span why-we-icon">
                             <img src="./img/icons/chose-icon-5.png" width="64px" />
                         </div>
                         <div class="benefit-block-text max-width-300">
@@ -671,9 +677,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 justify-content-center">
-                    <div class="row">
-                        <div class="span margin-right-30">
+                <div class="col-md-4">
+                    <div class="row text-center text-md-left">
+                        <div class="span why-we-icon">
                             <img src="./img/icons/chose-icon-6.png" width="64px" />
                         </div>
                         <div class="benefit-block-text max-width-300">
@@ -688,10 +694,10 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid padding-top-70 padding-bottom-70 background-green">
+    <div class="container-fluid space seventy background-green">
         <div class="row justify-content-center">
             <a href="#" data-toggle="modal" data-target="#video">
-                <div class="d-flex">
+                <div class="d-flex video-block">
                     <h3 class="color-white max-width-450">
                         ПРОГУЛЯЙСЯ ВІРТУАЛЬНИМ
                         ТУРОМ ПО МЕДИКУ!
@@ -700,12 +706,10 @@
                         <img src="./img/video.svg" height="64px" />
                     </div>
                 </div>
-
             </a>
-
         </div>
     </div>
-    <div class="container max-width-1200 padding-top-150 padding-bottom-150">
+    <div class="container max-width-1200 space">
         <div class="row justify-content-center">
             <div class="text-center">
                 <h2 class="margin-bottom-20">ПОДІЇ НА МЕДИКУ</h2>
@@ -813,7 +817,7 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2573.8103463525854!2d24.00864958781269!3d49.82722963128959!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x894bf62f0db0fc23!2z0JzQtdC00LjQug!5e0!3m2!1sru!2sua!4v1594925270936!5m2!1sru!2sua" width="100%" height="700px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2573.8103463525854!2d24.00864958781269!3d49.82722963128959!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x894bf62f0db0fc23!2z0JzQtdC00LjQug!5e0!3m2!1sru!2sua!4v1594925270936!5m2!1sru!2sua" class="map" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             <div class="contacts-block">
                 <div class="d-flex justify-content-between padding-bottom-30 border-bottom">
                     <h4>МИ ВІДЧИНЕНІ:</h4>
@@ -826,7 +830,7 @@
                 <div class="margin-top-30">
                     <h4 class="margin-bottom-30">ВИНИКЛИ ЗАПИТАННЯ?</h4>
                     <form action="#">
-                        <div class="form-row margin-bottom-10">
+                        <div class="form-row margin-bottom-15">
                             <div class="col-6">
                                 <input type="text" placeholder="Ім'я.." required />
                             </div>
@@ -847,10 +851,12 @@
     </div>
 </body>
 <footer>
-    <div class="container padding-top-100 padding-bottom-100">
+    <div class="container space hundred">
         <div class="row">
-            <div class="col-3">
-                <img src="./img/logo.svg" height="80px" />
+            <div class="col-md-3">
+                <a href="#">
+                    <img src="./img/logo.svg" class="logo" />
+                </a>
 
                 <h5 class="color-white margin-top-30">СЛІДКУЙ ЗА НАМИ!</h5>
                 <div class="footer-social">
@@ -861,32 +867,37 @@
                     <a href="#"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-md-3">
                 <h4 class="color-red">НАШІ ПОДІЇ:</h4>
-
                 <div class="event-block">
-                    <h5>BLACK EVENT #1 | HIP-HOP</h5>
-                    <div class="d-flex">
-                        <img src="./img/clock.svg" height="14px" />
-                        <p>22.07.2020</p>
-                    </div>
+                    <a href="#">
+                        <h5>BLACK EVENT #1 | HIP-HOP</h5>
+                        <div class="d-flex">
+                            <img src="./img/clock.svg" height="14px" />
+                            <p>22.07.2020</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="event-block">
-                    <h5>POOL BAR - 15 YEARS - MEDIC POOL</h5>
-                    <div class="d-flex">
-                        <img src="./img/clock.svg" height="14px" />
-                        <p>22.07.2020</p>
-                    </div>
+                    <a href="#">
+                        <h5>POOL BAR - 15 YEARS - MEDIC POOL</h5>
+                        <div class="d-flex">
+                            <img src="./img/clock.svg" height="14px" />
+                            <p>22.07.2020</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="event-block">
-                    <h5>КОРПОРАТИВ GAMELOFT</h5>
-                    <div class="d-flex">
-                        <img src="./img/clock.svg" height="14px" />
-                        <p>22.07.2020</p>
-                    </div>
+                    <a href="#">
+                        <h5>КОРПОРАТИВ GAMELOFT</h5>
+                        <div class="d-flex">
+                            <img src="./img/clock.svg" height="14px" />
+                            <p>22.07.2020</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-md-3">
                 <h4 class="color-red">ЩО У НАС Є?</h4>
 
                 <ul class="navbar-nav">
@@ -908,7 +919,7 @@
                 </ul>
 
             </div>
-            <div class="col-3">
+            <div class="col-md-3">
                 <h4 class="color-red">КОНТАКТИ:</h4>
 
                 <div class="contact-block">
@@ -916,7 +927,7 @@
                         <img src="./img/phone.svg" width="24px" height="24px" />
                         <div class="contact">
                             <h5>Ресторан «Дача»</h5>
-                            <p>+38 (067) 792 19 28</p>
+                            <a href="tel:+38 (067) 792 19 28">+38 (067) 792 19 28</a>
                         </div>
                     </div>
                 </div>
@@ -925,10 +936,8 @@
                         <img src="./img/phone.svg" width="24px" height="24px" />
                         <div class="contact">
                             <h5>Замовлення міні-футболу:</h5>
-                            <p>
-                                +38 (063) 628 73 60 <br/>
-                                +38 (068) 301 45 00
-                            </p>
+                            <a href="tel:+38 (063) 628 73 60">+38 (063) 628 73 60</a><br/>
+                            <a href="tel:+38 (068) 301 45 00">+38 (068) 301 45 00</a>
                         </div>
                     </div>
                 </div>
@@ -940,7 +949,7 @@
                                 Арт-директор <br/>
                                 (Організація подій та реклама):
                             </h5>
-                            <p>+38 (097) 904 20 25</p>
+                            <a href="tel:+38 (097) 904 20 25">+38 (097) 904 20 25</a>
                         </div>
                     </div>
                 </div>

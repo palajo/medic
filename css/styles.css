@@ -10,7 +10,7 @@ html{
 	padding: 0;
 }
 body{
-	font-family: 'Sf pro display';
+    font-family: 'Lato', sans-serif;
 	font-size: 14px;
 	line-height: 20px;
 
@@ -21,12 +21,21 @@ body{
     -webkit-overflow-scrolling: touch;
 }
 
-/* ------- bootstrap corrections */
+/* ------- bootstrap */
     .container{
         max-width: 1440px;
     }
-    .container-1200{
-        max-width: 1200px;
+    .space{
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    .space.hundred{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .space.seventy{
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
 /* ------------------------ */
 
@@ -303,9 +312,6 @@ body{
 
 
 /* ------- space */
-    .space{
-        margin-top: 50px;
-    }
 	.max-width-250{
 		max-width: 250px;
 	}
@@ -332,6 +338,7 @@ body{
 	}
 /* ------------------------ */
 
+/* ------- font-sizes-weights / margins / line-heights */
 h1, h2, h3, h4, h5, p, a {
     margin: 0px;
 }
@@ -365,28 +372,21 @@ h4{
     font-weight: 700;
 }
 h5{
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
 
     font-weight: normal;
 }
 p{
     font-size: 14px;
-    font-family: 'Sf pro display';
     font-weight: 400;
-
-    color: #666;
 }
 a, a:hover{
     text-decoration: none;
 }
+/* ------------------------ */
 
-
-
-
-
-
-
+/* ------- button styles */
 button:focus{
     outline: none;
 }
@@ -424,6 +424,16 @@ button:focus{
     outline: none;
 }
 
+    /* ------- small buttons / used for price choice */
+    .choice-button{
+        width: 180px;
+        height: 50px;
+
+        border-radius: 99px;
+    }
+    /* ------ */
+
+/* ------------------------ */
 
 
 
@@ -431,7 +441,7 @@ button:focus{
 
 
 
-
+/* ------- backgrounds */
 .background-gray{
     background: #f5f5f5;
 }
@@ -442,7 +452,9 @@ button:focus{
     background: url("../img/background-green.jpg");
     background-size: cover;
 }
+/* ------------------------ */
 
+/* ------- font-colors */
 .color-green{
     color: #B0E229;
 }
@@ -455,62 +467,124 @@ button:focus{
 .color-red{
     color: #E4381C;
 }
+/* ------------------------ */
 
 
 
+/* ------- preloader */
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    background: #000;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    border-radius: 60px;
+    animation: loader 0.8s linear infinite;
+    -webkit-animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        border: 4px solid #673ab7;
+        border-left-color: transparent;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+}
+
+@-webkit-keyframes loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        border: 4px solid #673ab7;
+        border-left-color: transparent;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+}
+/* ------------------------ */
 
 
-
+/* ------- header */
 header{
     position: absolute;
     z-index: 2;
     width: 100%;
     padding: 30px 100px;
 }
-
+.logo{
+    height: 80px;
+}
+.logo:hover{
+    transition: 0.3s ease;
+    filter: brightness(90%);
+}
 .top-social a{
     font-size: 24px;
     color: white;
     padding: 0px 5px;
 }
+.top-social a:hover{
+    transition: 0.3s ease;
+    color: #cdcbcb;
+}
+/* ------------------------ */
 
 
-
-
-
-
-
-
-
-/*---------------------
-  Hero Section
------------------------*/
-
-.hero-items .owl-item.active .single-hero-item .hero-text h2,
+/* ------- slider */
+.hero-items .owl-item.active .single-hero-item .hero-text h3,
 .hero-items .owl-item.active .single-hero-item .hero-text h1,
 .hero-items .owl-item.active .single-hero-item .hero-text .button-appear {
     top: 0;
     opacity: 1;
 }
-
-.hero-items .owl-item.active .single-hero-item .hero-text h2{
+.hero-items .owl-item.active .single-hero-item .hero-text h3{
     -webkit-transition: all 0.2s ease 0.2s;
     -o-transition: all 0.2s ease 0.2s;
     transition: all 0.2s ease 0.2s;
 }
-
 .hero-items .owl-item.active .single-hero-item .hero-text h1 {
     -webkit-transition: all 0.4s ease 0.4s;
     -o-transition: all 0.4s ease 0.4s;
     transition: all 0.4s ease 0.4s;
 }
-
 .hero-items .owl-item.active .single-hero-item .hero-text .button-appear {
     -webkit-transition: all 0.6s ease 0.6s;
     -o-transition: all 0.6s ease 0.6s;
     transition: all 0.6s ease 0.6s;
 }
-
 .hero-items .owl-nav button[type=button] {
     position: absolute;
     left: 25px;
@@ -526,13 +600,10 @@ header{
     color: rgba(255, 255, 255, 1);
     transition: 0.3s ease;
 }
-
-
 .hero-items .owl-nav button[type=button].owl-next {
     left: auto;
     right: 25px;
 }
-
 .hero-items .owl-dots {
     position: absolute;
     left: 0;
@@ -540,7 +611,6 @@ header{
     width: 100%;
     text-align: center;
 }
-
 .hero-items .owl-dots button.owl-dot {
     height: 3px;
     width: 24px;
@@ -557,7 +627,6 @@ header{
 .hero-items .owl-dots button.owl-dot:last-child {
     margin-right: 0;
 }
-
 .single-hero-item {
     height: 800px;
     padding-top: 20px;
@@ -571,26 +640,13 @@ header{
     -ms-flex-pack: center;
     justify-content: center;
 }
-
 .single-hero-item .hero-text {
     text-align: center;
 }
-
 .hero-text h1, .hero-text h3{
     color: white;
 }
-.hero-text h1{
-    font-size: 84px;
-    line-height: 90px;
-}
-.hero-text h3{
-    font-size: 64px;
-    line-height: 72px;
-
-    font-weight: 300;
-}
-
-.single-hero-item .hero-text h2 {
+.single-hero-item .hero-text h3 {
     color: #ffffff;
     text-transform: uppercase;
 
@@ -605,10 +661,10 @@ header{
     top: 50px;
     opacity: 0;
 }
-
 .single-hero-item .hero-text h1 {
     color: #ffffff;
-    font-size: 90px;
+    font-size: 84px;
+    line-height: 90px;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 46px;
@@ -616,16 +672,15 @@ header{
     top: 50px;
     opacity: 0;
 }
-
 .single-hero-item .hero-text .button-appear {
     position: relative;
     top: 50px;
     opacity: 0;
 }
+/* ------------------------ */
 
 
-
-
+/* ------- two images (tired block) */
 .double-image {
     position: relative;
     top: 0;
@@ -633,27 +688,28 @@ header{
 }
 .image-block-1 {
     position: relative;
+    height: 250px;
+
     top: 0;
     left: 0;
+
     box-shadow: 10px 15px 15px  rgba(0,0,0,0.2);
+
+
 }
 .image-block-2 {
     position: absolute;
+    height: 250px;
+
     top: 100px;
     left: 100px;
+
     box-shadow: 10px 15px 15px  rgba(0,0,0,0.2);
 }
+/* ------------------------ */
 
 
-
-
-
-.choice-button{
-    width: 180px;
-    height: 50px;
-
-    border-radius: 99px;
-}
+/* ------- prices -tabs */
 .nav-tabs .nav-link.active .choice-button{
     background: white;
     border: 2px solid #E16521;
@@ -684,36 +740,17 @@ header{
     -webkit-animation: slide-down 1.5s ease;
     animation-fill-mode: forwards;
 }
+/* ------------------------ */
 
 
+/* ------- prices -block */
 .price-block{
     width: 30%;
     background: #f5f5f5;
 
     padding: 50px 50px 70px 50px;
 }
-@keyframes slide-up {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes slide-down {
-    0% {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-p.warning{
+p.requirements{
     font-size: 14px;
     line-height: 18px;
 
@@ -731,28 +768,26 @@ p.warning{
     width: 100%;
 }
 .price-block table tr th{
-    width: 33.3%;
     background: white;
 
-    padding: 0px 30px;
+    padding: 0px 25px;
     padding-top: 15px;
 
     font-weight: 400;
     color: #999;
 
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 20px;
 }
 .price-block table tr td{
-    width: 33.3%;
     background: white;
     border-bottom: 1px solid #cdcbcb;
 
-    padding: 0px 30px;
+    padding: 0px 25px;
     padding-bottom: 15px;
 
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 24px;
 
     font-family: 'Oswald';
     font-weight: 400;
@@ -760,7 +795,6 @@ p.warning{
     color: #1f1f1f;
 
 }
-
 .price-block.favourite h4{
     color: white;
 }
@@ -774,66 +808,40 @@ p.warning{
 
     color: white;
 }
+@keyframes slide-up {
+    0% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes slide-down {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+/* ------------------------ */
 
 
-.news-block{
+/* ------- why-we -block */
+.why-we-icon{
+    margin-right: 30px;
+}
+.row.why-we.margin{
+    margin-bottom: 100px;
+}
+/* ------------------------ */
+
+
+/* ------- contacts -block */
+.map{
     width: 100%;
-
-    background: #e4381c; /* Old browsers */
-    background: -moz-linear-gradient(right,  #e4381c 0%, #e16521 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(right,  #e4381c 0%,#e16521 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to left,  #e4381c 0%,#e16521 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4381c', endColorstr='#e16521',GradientType=1 ); /* IE6-9 */
-
-    display: flex;
-    padding: 30px;
-
-    background-size: cover;
+    height: 700px;
 }
-
-.news-block:hover::before{
-    position: absolute;
-    content: '';
-
-
-    background: rgba(255, 255, 255, 0.4);
-
-    top: 0;
-    left: 0;
-
-}
-
-
-.news-block.big{
-    height: 420px;
-}
-.news-block.mid{
-    height: 340px;
-}
-.news-block.small{
-    height: 260px;
-}
-.col-4 .news-block:last-child{
-    margin-top: 30px;
-}
-.news-block .news-block-text {
-    max-width: 300px;
-}
-.news-block .news-block-text p.news-category{
-    font-size: 14px;
-    line-height: 18px;
-
-    font-family: 'Oswald';
-    font-weight: 400;
-
-    color: white;
-    margin-bottom: 10px;
-}
-.news-block .news-block-text h4.news-title{
-    color: white;
-}
-
-
 .contacts-block{
     position: absolute;
     width: 600px;
@@ -858,7 +866,6 @@ p.warning{
 
     margin-right: 10px;
 }
-
 input[type="text"]{
 
     border: none;
@@ -871,16 +878,15 @@ input[type="text"]{
     border-top: 1px solid #cdcbcb;
 
     width: 100% ;
+    font-size: 14px;
 }
 input[type="text"]:hover, input[type="text"]:focus,
 textarea:hover, textarea:focus {
-
     border-bottom: 1px solid #bfbdbd;
     border-top: 1px solid #bfbdbd;
     transition: 0.3s ease;
 }
 textarea{
-
     border: none;
     outline: none;
 
@@ -894,7 +900,10 @@ textarea{
     width: 100%;
     height: 100px;
 }
+/* ------------------------ */
 
+
+/* ------- footer */
 footer{
     background: #1f1f1f;
 }
@@ -908,6 +917,10 @@ footer .footer-social a{
     color: white;
     font-size: 18px;
     padding-right: 10px;
+}
+footer .footer-social a:hover{
+    transition: 0.3s ease;
+    color: #cdcbcb;
 }
 
 footer .event-block{
@@ -928,9 +941,14 @@ footer .event-block p{
     line-height: 14px;
     font-weight: 500;
 }
-
-
-
+footer .event-block:hover h5{
+    color: #cdcbcb;
+    transition: 0.3s ease;
+}
+footer .event-block:hover p {
+    color: #666;
+    transition: 0.3s ease;
+}
 
 
 footer .contact-block .contact{
@@ -943,10 +961,17 @@ footer .contact-block .contact h5{
     text-transform: uppercase;
 
     font-weight: 500;
+
+    margin-bottom: 5px;
 }
-footer .contact-block .contact p{
+footer .contact-block .contact a{
     margin-top: 5px;
     color: #808080;
+}
+
+footer .contact-block .contact a:hover {
+    color: #cdcbcb;
+    transition: 0.3s ease;
 }
 footer .contact-block{
     margin-bottom: 20px;
@@ -969,17 +994,18 @@ ul.navbar-nav > li.nav-item > a.nav-link{
     padding: 0;
 
 }
+ul.navbar-nav > li.nav-item > a.nav-link:hover {
+    transition: 0.3s ease;
+    color: #cdcbcb;
+}
+/* ------------------------ */
 
 
-
-
-
-
-
+/* ------- services grid + blocks + animations */
 .grid {
     position: relative;
     margin: 0 auto;
-    padding: 1em 0 4em;
+    padding: 0;
     max-width: 1200px;
     list-style: none;
     text-align: center;
@@ -1042,42 +1068,41 @@ ul.navbar-nav > li.nav-item > a.nav-link{
     color: #fff;
 }
 
+  /*------------------------------*/
+ /***** services animations *****/
+/*----------------------------*/
 
-/*---------------*/
-/***** services *****/
-/*---------------*/
-
-figure.effect-bubba:nth-child(1) {
+figure.service:nth-child(1) {
     background: #5ECD06;
 }
-figure.effect-bubba:nth-child(2) {
+figure.service:nth-child(2) {
     background: #37A8FC;
 }
-figure.effect-bubba:nth-child(3) {
+figure.service:nth-child(3) {
     background: #9e5406;
 }
-figure.effect-bubba:nth-child(4) {
+figure.service:nth-child(4) {
     background: #0C9A09;
 }
-figure.effect-bubba:nth-child(5) {
+figure.service:nth-child(5) {
     background: #C87013;
 }
-figure.effect-bubba:nth-child(6) {
+figure.service:nth-child(6) {
     background: #3F90CB;
 }
 
-figure.effect-bubba img {
+figure.service img {
     opacity: 0.85;
     -webkit-transition: opacity 0.35s;
     transition: opacity 0.35s;
 }
 
-figure.effect-bubba:hover img {
+figure.service:hover img {
     opacity: 0.4;
 }
 
-figure.effect-bubba figcaption::before,
-figure.effect-bubba figcaption::after {
+figure.service figcaption::before,
+figure.service figcaption::after {
     position: absolute;
     top: 30px;
     right: 30px;
@@ -1089,21 +1114,21 @@ figure.effect-bubba figcaption::after {
     transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-bubba figcaption::before {
+figure.service figcaption::before {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     -webkit-transform: scale(0,1);
     transform: scale(0,1);
 }
 
-figure.effect-bubba figcaption::after {
+figure.service figcaption::after {
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
     -webkit-transform: scale(1,0);
     transform: scale(1,0);
 }
 
-figure.effect-bubba h3 {
+figure.service h3 {
     -webkit-transition: -webkit-transform 0.7s;
     transition: transform 0.7s;
     -webkit-transform: translate3d(0,100px,0);
@@ -1112,7 +1137,7 @@ figure.effect-bubba h3 {
     text-shadow: 0px 2px 2px rgba(0,0,0,0.25);
 }
 
-figure.effect-bubba p {
+figure.service p {
     margin-top: 10px;
     padding: 0px 60px;
     opacity: 0;
@@ -1122,36 +1147,27 @@ figure.effect-bubba p {
     transform: translate3d(0,20px,0);
 }
 
-figure.effect-bubba:hover figcaption::before,
-figure.effect-bubba:hover figcaption::after {
+figure.service:hover figcaption::before,
+figure.service:hover figcaption::after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
 
-figure.effect-bubba:hover h3,
-figure.effect-bubba:hover p {
+figure.service:hover h3,
+figure.service:hover p {
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
+/* ------------------------ */
 
 
-
-
-
-
-
-
-
-
-/*---------------*/
-/***** events *****/
-/*---------------*/
+/* ------- events grid + blocks + animations */
 .event-grid {
     position: relative;
     margin: 0 auto;
-    padding: 1em 0 4em;
+    padding: 0;
     max-width: 1200px;
     list-style: none;
     text-align: center;
@@ -1239,6 +1255,9 @@ figure.effect-bubba:hover p {
     color: #fff;
 }
 
+/*------------------------------*/
+/***** event animations *****/
+/*----------------------------*/
 figure.event.small {
     background: #5ECD06;
 }
@@ -1325,3 +1344,4 @@ figure.event:hover p {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
+/* ------------------------ */
