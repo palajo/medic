@@ -173,11 +173,14 @@
     }
 
 
-
+    .event-grid > .row > div{
+        width: 100%;
+    }
     .event-grid figure {
         width: 100%;
+        max-width: 400px;
 
-        margin: 0px;
+        margin: 0px auto;
         margin-bottom: 40px;
     }
     .event-grid figure.small{
@@ -210,12 +213,13 @@
         padding: 100px 50px;
         box-shadow: none;
 
+        background: #f8f8f8;
     }
 
-    footer .col-md-3{
+    footer .col-lg-3{
         margin-bottom: 70px;
     }
-    footer .col-md-3:last-child{
+    footer .col-lg-3:last-child{
         margin-bottom: 0px;
     }
 }

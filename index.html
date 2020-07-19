@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" type="text/css" href="./css/styles.css?v=1" />
     <link rel="stylesheet" type="text/css" href="./css/adaptation/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="./css/adaptation/tablet.css" />
+    <link rel="stylesheet" type="text/css" href="./css/adaptation/desktops.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
@@ -817,34 +819,36 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2573.8103463525854!2d24.00864958781269!3d49.82722963128959!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x894bf62f0db0fc23!2z0JzQtdC00LjQug!5e0!3m2!1sru!2sua!4v1594925270936!5m2!1sru!2sua" class="map" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            <div class="contacts-block">
-                <div class="d-flex justify-content-between padding-bottom-30 border-bottom">
-                    <h4>МИ ВІДЧИНЕНІ:</h4>
-                    <p class="working-time text-right">
-                        <b>ПН-ПТ:</b> 09:00 - 22:00 <br/>
-                        <b>Субота:</b> 09:00 - 22:00 <br/>
-                        <b>Неділя:</b> 09:00 - 22:00 <br/>
-                    </p>
-                </div>
-                <div class="margin-top-30">
-                    <h4 class="margin-bottom-30">ВИНИКЛИ ЗАПИТАННЯ?</h4>
-                    <form action="#">
-                        <div class="form-row margin-bottom-15">
-                            <div class="col-6">
-                                <input type="text" placeholder="Ім'я.." required />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2573.8103463525854!2d24.00864958781269!3d49.82722963128959!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x894bf62f0db0fc23!2z0JzQtdC00LjQug!5e0!3m2!1sru!2sua!4v1594925270936!5m2!1sru!2sua" class="map order-2 order-lg-1" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="contacts-block order-1 order-lg-2">
+                <div class="tablet-max-width">
+                    <div class="d-flex justify-content-between padding-bottom-30 border-bottom">
+                        <h4>МИ ВІДЧИНЕНІ:</h4>
+                        <p class="working-time text-right">
+                            <b>ПН-ПТ:</b> 09:00 - 22:00 <br/>
+                            <b>Субота:</b> 09:00 - 22:00 <br/>
+                            <b>Неділя:</b> 09:00 - 22:00 <br/>
+                        </p>
+                    </div>
+                    <div class="margin-top-30">
+                        <h4 class="margin-bottom-30">ВИНИКЛИ ЗАПИТАННЯ?</h4>
+                        <form action="#">
+                            <div class="form-row margin-bottom-15">
+                                <div class="col-6">
+                                    <input type="text" placeholder="Ім'я.." required />
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="phone-number" class="phone" placeholder="+38 (000) 00-00-000" required />
+                                </div>
                             </div>
-                            <div class="col-6">
-                                <input type="text" id="phone-number" class="phone" placeholder="+38 (000) 00-00-000" required />
+                            <div class="form-row margin-bottom-30">
+                                <div class="col-12">
+                                    <textarea placeholder="Повідомлення.." required ></textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-row margin-bottom-30">
-                            <div class="col-12">
-                                <textarea placeholder="Повідомлення.." required ></textarea>
-                            </div>
-                        </div>
-                        <button type="submit" class="button">Надіслати</button>
-                    </form>
+                            <button type="submit" class="button">Надіслати</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -853,7 +857,7 @@
 <footer>
     <div class="container space hundred">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3">
                 <a href="#">
                     <img src="./img/logo.svg" class="logo" />
                 </a>
@@ -867,7 +871,7 @@
                     <a href="#"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3">
                 <h4 class="color-red">НАШІ ПОДІЇ:</h4>
                 <div class="event-block">
                     <a href="#">
@@ -897,7 +901,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3">
                 <h4 class="color-red">ЩО У НАС Є?</h4>
 
                 <ul class="navbar-nav">
@@ -919,7 +923,7 @@
                 </ul>
 
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3">
                 <h4 class="color-red">КОНТАКТИ:</h4>
 
                 <div class="contact-block">
